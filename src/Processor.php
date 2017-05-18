@@ -27,7 +27,9 @@ class Processor
     {
         $class = $request->getAttribute('entity');
         $instance = $this->entitiesFactory->createEntities($class);
-        $response->getBody()->write(json_encode(['data' => $instance->getEntityById($args['id'])]));
+        $response->getBody()->write(json_encode([
+            'data' => $instance->getEntityById($request->getAttribute('id'))
+        ]));
         return $response->withHeader('Content-Type', 'application/json');
     }
 }
