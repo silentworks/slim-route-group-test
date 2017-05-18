@@ -1,0 +1,10 @@
+{
+    "autoload": {
+        "psr-4": {
+            "RouteGroupTest\\": "src/"
+        }
+    },
+    "require": {
+        "slim/slim": "^3.8"
+    }
+}
